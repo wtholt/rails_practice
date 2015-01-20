@@ -1,0 +1,16 @@
+<h1>FC Köln</h1>
+
+<%= link_to "New Player", new_player_path %>
+<br>
+<ul>
+<% @players.each do |player| %>
+	<li>
+		<%= link_to player.name, player_path(player) %>
+		<%= player.position %>
+		<%= player.age %>
+		<%= player.nationality %>
+		<%= link_to "Edit", edit_player_path(player)%>
+		<%= link_to "Delete", player_path(player), method: :delete %>
+	</li>
+<% end %>
+</ul>

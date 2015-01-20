@@ -1,0 +1,17 @@
+<h1>Edit Player</h1>
+
+<%= form_for @player do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :position %>
+	<%= f.text_field :position %>
+	<br>
+	<%= f.label :age %>
+	<%= f.text_field :age %>
+	<br>
+	<%= f.label :nationality %>
+	<%= f.text_field :nationality %>
+	<br>
+	<%= f.submit %>
+<% end %>
